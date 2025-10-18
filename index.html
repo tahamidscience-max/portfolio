@@ -6,7 +6,9 @@
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     </head>
     <body class="!scroll-smooth">
-        <header class="text-gray-600 body-font fixed top-0 w-full bg-white z-10">
+        <header
+            class="text-gray-600 body-font fixed top-0 w-full bg-white z-10"
+        >
             <div
                 class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"
             >
@@ -26,13 +28,16 @@
                 <nav
                     class="md:ml-auto flex flex-wrap items-center text-base justify-center"
                 >
-                    <a href="/" class="mr-5 hover:text-gray-900">Home</a#>
-                    <a href="#about" class="mr-5 hover:text-gray-900">About Me</a>
-                    <a href="#interest" class="mr-5 hover:text-gray-900">Interest</a>
+                    <a href="#about" class="mr-5 hover:text-gray-900"
+                        >About Me</a
+                    >
+                    <a href="#interest" class="mr-5 hover:text-gray-900"
+                        >Interest</a
+                    >
                     <a href="#media" class="mr-5 hover:text-gray-900">Media</a>
                 </nav>
                 <a
-                href="#contact"
+                    href="#contact"
                     class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"
                 >
                     Contact
@@ -92,7 +97,7 @@
                         <h2
                             class="text-sm title-font text-gray-500 tracking-widest"
                         >
-                             More About Me
+                            More About Me
                         </h2>
                         <h1
                             class="text-gray-900 text-3xl title-font font-medium mb-1"
@@ -225,7 +230,7 @@
             </div>
         </section>
         <section id="media" class="h-8"></section>
-        <section  class="text-gray-600 body-font">
+        <section class="text-gray-600 body-font">
             <div class="container px-5 py-24 mx-auto">
                 <div class="flex flex-col text-center w-full mb-20">
                     <h1
@@ -251,7 +256,6 @@
                             <div
                                 class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100"
                             >
-
                                 <h1
                                     class="title-font text-lg font-medium text-gray-900 mb-3"
                                 >
@@ -424,31 +428,33 @@
         </footer>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-  // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
+        <script>
+            $(document).ready(function () {
+                // Add smooth scrolling to all links
+                $("a").on("click", function (event) {
+                    // Make sure this.hash has a value before overriding default behavior
+                    if (this.hash !== "") {
+                        // Prevent default anchor click behavior
+                        event.preventDefault();
 
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
+                        // Store hash
+                        var hash = this.hash;
 
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-});
-</script>
+                        // Using jQuery's animate() method to add smooth page scroll
+                        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                        $("html, body").animate(
+                            {
+                                scrollTop: $(hash).offset().top,
+                            },
+                            800,
+                            function () {
+                                // Add hash (#) to URL when done scrolling (default click behavior)
+                                window.location.hash = hash;
+                            }
+                        );
+                    } // End if
+                });
+            });
+        </script>
     </body>
 </html>
